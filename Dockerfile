@@ -1,5 +1,5 @@
-FROM ubuntu:20.04
-LABEL maintainer="Jeff Geerling"
+FROM ubuntu:21.10
+LABEL org.opencontainers.image.authors="Quien Sabe <qs5779@mail.com>"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
