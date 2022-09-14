@@ -20,6 +20,11 @@ jobs:
         with:
           env-file: .env
 
+      - name: Show Latest
+        id: latest
+        run: |
+          echo "BUILD_LATEST: $BUILD_LATEST"
+
   # Test the image builds and works correctly.
   test:
     name: Test
