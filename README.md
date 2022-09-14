@@ -1,16 +1,18 @@
-# Ubuntu 21.10 (Impish Indri) Ansible Test Image
+# Ubuntu Ansible Test Images
 
-[![CI](https://github.com/qs5779/docker-ubuntu2110-ansible/workflows/Build/badge.svg?branch=master&event=push)](https://github.com/qs5779/docker-ubuntu2110-ansible/actions?query=workflow%3ABuild) [![Docker pulls](https://img.shields.io/docker/pulls/qs5779/docker-ubuntu2110-ansible)](https://hub.docker.com/r/qs5779/docker-ubuntu2110-ansible/)
+<!-- [![CI](https://github.com/qs5779/docker-ubuntu2110-ansible/workflows/Build/badge.svg?branch=master&event=push)](https://github.com/qs5779/docker-ubuntu2110-ansible/actions?query=workflow%3ABuild) [![Docker pulls](https://img.shields.io/docker/pulls/qs5779/docker-ubuntu-ansible)](https://hub.docker.com/r/qs5779/docker-ubuntu2110-ansible/) -->
 
-Ubuntu 21.10 (Impish Indri) Docker container for Ansible playbook and role testing.
+Ubuntu Docker containers for Ansible playbook and role testing.
 
 ## Tags
 
-  - `latest`: Latest stable version of Ansible.
+  - `20.04`: Latest stable version of Ansible.
+  - `22.04`: Latest stable version of Ansible.
+  - `latest`: Latest ubuntu LTS version.
 
 The latest tag is a lightweight image for basic validation of Ansible playbooks.
 
-## How to Build
+<!-- ## How to Build
 
 This image is built on Docker Hub automatically any time the upstream OS container is rebuilt, and any time a commit is made or merged to the `master` branch. But if you need to build the image on your own locally, do the following:
 
@@ -29,7 +31,7 @@ This image is built on Docker Hub automatically any time the upstream OS contain
 
 ## Notes
 
-I use Docker to test my Ansible roles and playbooks on multiple OSes using CI tools like Jenkins and Travis. This container allows me to test roles and playbooks using Ansible running locally inside the container.
+I use Docker to test my Ansible roles and playbooks on multiple OSes using CI tools like Jenkins and Travis. This container allows me to test roles and playbooks using Ansible running locally inside the container. -->
 
 > **Important Note**: I use this image for testing in an isolated environment—not for production—and the settings and configuration used may not be suitable for a secure and performant production environment. Use on production servers/in the wild at your own risk!
 
