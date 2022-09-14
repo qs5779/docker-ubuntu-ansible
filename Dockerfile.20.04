@@ -1,4 +1,4 @@
-FROM ubuntu:21.10
+FROM ubuntu:20.04
 
 # https://github.com/opencontainers/image-spec/blob/main/annotations.md
 LABEL org.opencontainers.image.source="https://github.com/qs5779/python-multi"
@@ -11,8 +11,12 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV pip_packages "ansible"
 
 # Install dependencies.
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN apt-get update && \
+    apt-get install -yq tzdata && \
+    ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata
+
+RUN apt-get install -y --no-install-recommends \
        apt-utils \
        build-essential \
        locales \
