@@ -10,8 +10,11 @@ then
     git tag --delete origin "$TAG"
     echo "Deleting existing tag from origin"
     git push --delete origin "$TAG"
+    ACTION=Updating
+  else
+    ACTION=Adding
   fi
-    git tag -am "Adding tag: $TAG" "$TAG"
+    git tag -am "${ACTION} tag: $TAG" "$TAG"
     git push --tags
 else
   echo "usage: $(basename "$0") tag"
