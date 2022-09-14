@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Test building image.
-        run: docker build -t docker-ansible -f Dockerfile.${BUILD_LATEST}.
+        run: docker build -t docker-ansible -f Dockerfile.${BUILD_LATEST} .
 
       - name: Run the built image.
         run: docker run --name test-container -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro docker-ansible
